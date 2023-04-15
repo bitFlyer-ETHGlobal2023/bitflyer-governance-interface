@@ -28,6 +28,34 @@ input {
     height: auto;
 }
 
+.content-lockAndMint-top {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.lockAndMint-top-nav {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-botton {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 15px 50px;
+    margin: 0 20px;
+    background: linear-gradient(to bottom right, rgb(95, 156, 255), rgb(55, 0, 255));
+}
+
+a.top-botton:hover {
+    color: #fff;
+    background: linear-gradient(to bottom right, rgb(60, 135, 255), rgb(44, 0, 205));
+}
+
 .content-lockAndMint-login-title{
     font-size: 20px;
     font-weight: 500;
@@ -62,12 +90,12 @@ a.btn--orange {
     color: #fff;
     border-radius: 5px;
     padding: 15px 50px;
-    background-color: rgb(33, 150, 243) ;
+    background: linear-gradient(to bottom right, rgb(95, 156, 255), rgb(55, 0, 255));
 }
 .btn--orange:hover,
 a.btn--orange:hover {
     color: #fff;
-    background: rgb(76, 165, 238) ;
+    background: linear-gradient(to bottom right, rgb(60, 135, 255), rgb(44, 0, 205));
 }
 
 .content-lockAndMint-login-form{

@@ -44,18 +44,18 @@ const LockAndMint = () => {
       <div className="content-lockAndMint">
         { isLogin &&
           <div className="content-lockAndMint-top">
-            <Link
-                to="/lock-and-mint/lock"
-                className="hover:border-gray-500 mr-5 border-gray-400 border border-r rounded-md px-2 text-lg"
-            >
-                Lock your tokens
-            </Link>
-            <Link
-                to="/lock-and-mint/mint"
-                className="hover:border-gray-500 border-gray-400 border border-r rounded-md px-2 text-lg"
-            >
-                Mint NFT
-            </Link>
+            <div className="lockAndMint-top-nav">
+              <div className="lockAndMint-top-botton">
+                <Link className="top-botton" to="/lock-and-mint/lock">
+                    Lock your tokens
+                </Link>
+              </div>
+              <div className="lockAndMint-top-botton">
+                <Link className="top-botton" to="/lock-and-mint/mint">
+                    Mint NFT
+                </Link>
+              </div>
+            </div>
             <Outlet context={[isLogin, setIsLogin, userInfo, setUserInfo]} />
           </div>
         }
