@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./style/index.css";
 import "@rainbow-me/rainbowkit/styles.css";
 import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
-import { configureChains, createClient, WagmiConfig } from "wagmi";
+import { configureChains, createClient, goerli, WagmiConfig } from "wagmi";
 import { mainnet, polygon, optimism, arbitrum } from "wagmi/chains";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
@@ -44,7 +44,7 @@ const router = createBrowserRouter([
 ]);
 
 const { chains, provider } = configureChains(
-  [mainnet, polygon, optimism, arbitrum],
+  [goerli, polygon, optimism, arbitrum], // change  here to add support for more chains
   [publicProvider()]
 );
 

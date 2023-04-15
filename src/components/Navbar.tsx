@@ -31,11 +31,10 @@ const Navbar = () => {
         <li className=" p-4">
           <Link to="/lock-and-mint">Lock/Mint</Link>
         </li>
-        <li className=" block p-4">
-          <a href={snapshotURL}>Vote</a>
-        </li>
-        <li className="block p-4">
-          <ConnectButton />
+        <li className="p-4 ">
+          <a href={snapshotURL}>
+            Vote&nbsp;on&nbsp;<span className="normal-case">SnapShot</span>
+          </a>
         </li>
       </ul>
       <div className="block md:hidden">
