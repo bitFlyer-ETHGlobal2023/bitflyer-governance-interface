@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import { externalLink } from "../libs/configs";
 
 const Navbar = () => {
   const snapshotURL = "https://snapshot.org/#/bitflyer.eth";
@@ -20,20 +21,23 @@ const Navbar = () => {
       <h1 className="w-full text-3xl font-bold text-[#1982d9]">
         {!isSideNavOpen && (
           <div>
-            bitFlyer <span className=" text-white">Governance</span>
+            bitFlyer<span className=" text-white">Governance</span>
           </div>
         )}
       </h1>
-      <ul className="items-center uppercase hidden md:flex">
-        <li className=" p-4">
+      <ul className="items-center uppercase hidden md:flex font-semibold">
+        <li className=" p-4 hover:underline">
           <Link to="/">Home</Link>
         </li>
-        <li className=" p-4">
-          <Link to="/lock-and-mint">Lock/Mint</Link>
+        <li className=" p-4 hover:underline">
+          <Link to="/lock-and-mint">Lock&nbsp;&&nbsp;Mint</Link>
         </li>
         <li className="p-4 ">
-          <a href={snapshotURL}>
-            Vote&nbsp;on&nbsp;<span className="normal-case">SnapShot</span>
+          <a href={externalLink.snapshotOrg}>
+            Vote&nbsp;on&nbsp;
+            <span className="normal-case hover:underline underline-offset-1 text-yellow-300">
+              Snapshot⚡️
+            </span>
           </a>
         </li>
       </ul>

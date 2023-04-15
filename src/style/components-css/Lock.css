@@ -1,65 +1,64 @@
 input {
-    color: #242424;
-    padding-left: 10px;
+  color: #242424;
+  padding-left: 10px;
 }
 
 .contents-lock {
-    background-color: rgb(25, 25, 25);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    padding-bottom: 15px;
-    border-radius: 7px;
-    max-width: 1000px;
+  background-color: rgb(25, 25, 25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 40px;
+  border-radius: 7px;
+  max-width: 1000px;
 }
 
-.content-lock{
-    background-color: #FFF;
-    margin: 0px 100px;
-    border-radius: 7px;
-    width: 700px;
-    padding-bottom: 40px;
-    box-shadow: 0px 10px 35px 0 rgba(0, 0, 0, .5);
+.content-lock {
+  background-color: #fff;
+  margin: 0px 100px;
+  border-radius: 7px;
+  width: 700px;
+  padding-bottom: 30px;
+  box-shadow: 0px 10px 35px 0 rgba(0, 0, 0, 0.5);
 }
 
-.conten-lock-form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    ;
+.conten-lock-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .content-lock-p {
-    padding-top: 30px;
-    text-align: center;
-    color: black;
-    font-size: 24px;
-    font-weight: bold;
+  padding-top: 20px;
+  text-align: center;
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .login-form-text {
-    height: 50px;
-    width: 80%;
-    padding: 10 16px;
-    margin: 15px 0;
-    border-radius: 4px;
-    border: none;
-    box-shadow: 0 0 0 1px #ccc inset;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
+  height: 50px;
+  width: 80%;
+  padding: 10 16px;
+  margin: 15px 0;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 0 0 1px #ccc inset;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 .login-form-text:focus {
-    outline: 0;
-    box-shadow: 0 0 0 3px rgb(33, 150, 243) inset;
+  outline: 0;
+  box-shadow: 0 0 0 3px rgb(33, 150, 243) inset;
 }
 
 .success-message {
-    text-align: center;
-    color: #242424;
-    font-size: 14px;
-    padding: 10px 0 0 0;
+  text-align: center;
+  color: #242424;
+  font-size: 14px;
+  padding: 10px 0 0 0;
 }

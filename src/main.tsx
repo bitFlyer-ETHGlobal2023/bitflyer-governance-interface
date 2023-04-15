@@ -4,15 +4,15 @@ import "./style/index.css";
 import "@rainbow-me/rainbowkit/styles.css";
 import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { configureChains, createClient, goerli, WagmiConfig } from "wagmi";
-import { mainnet, polygon, optimism, arbitrum } from "wagmi/chains";
-import { alchemyProvider } from "wagmi/providers/alchemy";
+import { polygon, optimism, arbitrum } from "wagmi/chains";
 import { publicProvider } from "wagmi/providers/public";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./routes/Root";
 import Home from "./routes/Home";
 import LockAndMint from "./routes/LockAndMint";
-import Lock from "./routes/Lock";
-import Mint from "./routes/Mint";
+import Lock from "./routes/LockAndMint/Lock";
+import Mint from "./routes/LockAndMint/Mint";
+import Account from "./routes/LockAndMint/Account";
 
 const router = createBrowserRouter([
   {
@@ -27,29 +27,22 @@ const router = createBrowserRouter([
       {
         path: "/lock-and-mint",
         element: <LockAndMint />,
-      },
-      {
-        path: "/lock-and-mint/lock",
-        element: <LockAndMint />,
         children: [
+          {
+            path: "/lock-and-mint",
+            index: true,
+            element: <Account />,
+          },
           {
             path: "/lock-and-mint/lock",
-            index: true,
             element: <Lock />,
-          }
-        ],
-      },
-      {
-        path: "/lock-and-mint/mint",
-        element: <LockAndMint />,
-        children: [
+          },
           {
             path: "/lock-and-mint/mint",
-            index: true,
             element: <Mint />,
-          }
+          },
         ],
-      }
+      },
     ],
   },
 ]);
@@ -66,7 +59,6 @@ const { connectors } = getDefaultWallets({
 });
 
 const wagmiClient = createClient({
-  // autoConnect: true,
   connectors,
   provider,
 });
