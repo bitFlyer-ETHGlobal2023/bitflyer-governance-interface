@@ -27,18 +27,29 @@ const router = createBrowserRouter([
       {
         path: "/lock-and-mint",
         element: <LockAndMint />,
+      },
+      {
+        path: "/lock-and-mint/lock",
+        element: <LockAndMint />,
         children: [
           {
-            path: "/lock-and-mint/",
+            path: "/lock-and-mint/lock",
             index: true,
             element: <Lock />,
-          },
-          {
-            path: "/lock-and-mint/mint",
-            element: <Mint />,
-          },
+          }
         ],
       },
+      {
+        path: "/lock-and-mint/mint",
+        element: <LockAndMint />,
+        children: [
+          {
+            path: "/lock-and-mint/mint",
+            index: true,
+            element: <Mint />,
+          }
+        ],
+      }
     ],
   },
 ]);
