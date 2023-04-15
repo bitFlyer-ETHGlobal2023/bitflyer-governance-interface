@@ -1,6 +1,7 @@
 import { Link, Outlet } from "react-router-dom";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import "../style/components-css/lockAndMint.css"
 import axios from "axios";
 
 const LockAndMint = () => {
@@ -38,10 +39,11 @@ const LockAndMint = () => {
   };
 
   return (
-    <div>
-      <div className="bg-black m-10 p-5 max-w-[1000px] h-[700px] mx-auto rounded-lg">
+    <div className="contents">
+      {/* <div className="bg-black m-10 p-5 max-w-[1000px] h-[700px] mx-auto rounded-lg"> */}
+      <div className="content-lockAndMint">
         { isLogin &&
-          <div>
+          <div className="content-lockAndMint-top">
             <Link
                 to="/lock-and-mint/lock"
                 className="hover:border-gray-500 mr-5 border-gray-400 border border-r rounded-md px-2 text-lg"
@@ -58,17 +60,17 @@ const LockAndMint = () => {
           </div>
         }
         { !userInfo &&
-          <div>
-            <p>Please login bitFlyer Account to lock your tokens</p>
-            <form onSubmit={handleSubmit(onSubmit)}>
-              <input type="text" placeholder="email" {...register("email", {required: true})}/>
-              <input type="text" placeholder="password" {...register("password", {required: true})}/>
-              <button type="submit">Login</button>
+          <div className="content-lockAndMint-login">
+            <p className="content-lockAndMint-login-title">Please login bitFlyer Account to lock your tokens</p>
+            <form className="content-lockAndMint-login-form" onSubmit={handleSubmit(onSubmit)}>
+              <input className="login-form-text" type="text" placeholder="email" {...register("email", {required: true})}/>
+              <input className="login-form-text" type="text" placeholder="password" {...register("password", {required: true})}/>
+              <button className="btn--orange"type="submit">Login</button>
             </form>
           </div>
         }
         { userInfo && 
-          <div>
+          <div className="content-lockAndMint-users">
             <p>UserName: {userInfo.name}</p>
             <p>Email: {userInfo.email}</p>
             <ul>
