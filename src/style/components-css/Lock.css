@@ -16,7 +16,7 @@ input {
 
 .content-lock{
     background-color: #FFF;
-    margin: 80px 100px;
+    margin: 0px 100px;
     border-radius: 7px;
     width: 700px;
     padding-bottom: 40px;
@@ -34,7 +34,6 @@ input {
 .content-lock-p {
     padding-top: 30px;
     text-align: center;
-    margin-top: 10px;
     color: black;
     font-size: 24px;
     font-weight: bold;
