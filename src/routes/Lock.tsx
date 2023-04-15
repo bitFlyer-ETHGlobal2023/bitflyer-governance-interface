@@ -7,6 +7,7 @@ import axios from "axios";
 
 const Lock = () => {
   // const { userInfo } = useOutletContext();
+  const [isSucceed, setIsSucceed] = useState(false);
   const { register, handleSubmit, formState: { errors } } = useForm();
 
   const onSubmit = async(data: any) => {
@@ -22,6 +23,7 @@ const Lock = () => {
       }
 
       const res = await axios.post(url, lockCoinObject);
+      setIsSucceed(true);
       console.log(res);
     } catch (err: any) {
       console.log(err);
@@ -40,6 +42,7 @@ const Lock = () => {
           <input className="login-form-text" type="text" placeholder="email" {...register("email", {required: true})}/>
           <button className="btn--orange" type="submit">Lock Coin</button>
         </form>
+        { isSucceed && <p className="success-message">Succeed to lock coins!</p>}
       </div>
     </div>
   );

@@ -56,3 +56,10 @@ input {
     outline: 0;
     box-shadow: 0 0 0 3px rgb(33, 150, 243) inset;
 }
+
+.success-message {
+    text-align: center;
+    color: #242424;
+    font-size: 14px;
+    padding: 10px 0 0 0;
+}
